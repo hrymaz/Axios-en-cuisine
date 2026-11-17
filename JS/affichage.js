@@ -67,6 +67,8 @@ button.addEventListener("click", async () => {
 
         const recipes = result.data.recipes;
 
+        recipesContainer.textContent = "" ; 
+
         recipes.forEach((recipe) => {
         
             const div = document.createElement('div')
@@ -75,7 +77,15 @@ button.addEventListener("click", async () => {
             const img = document.createElement('img')
             img.src = recipe.image 
             img.classList.add("w-full", "h-48", "object-cover", "rounded-xl")
-           
+            
+            const h2 = document.createElement('h2')
+            h2.textContent = recipe.name ;
+            h2.classList.add("text-xl", "font-bold", "text-gray-800", "mt-3")
+
+            const h3 = document.createElement('h3')
+            h3.textContent = "difficulty : " + recipe.difficulty;
+            h3.classList.add("text-sm", "text-gray-600", "mt-2")
+            
         });
 
     }
