@@ -69,6 +69,12 @@ button.addEventListener("click", async () => {
 
         recipes.forEach((recipe) => {
         
+            const div = document.createElement('div')
+            div.classList.add("bg-white", "p-4", "rounded-2xl", "shadow-md", "hover:shadow-lg", "transition", "duration-300")
+            
+            const img = document.createElement('img')
+            img.src = recipe.image 
+            img.classList.add("w-full", "h-48", "object-cover", "rounded-xl")
            
         });
 
