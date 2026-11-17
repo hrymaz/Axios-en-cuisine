@@ -85,7 +85,28 @@ button.addEventListener("click", async () => {
             const h3 = document.createElement('h3')
             h3.textContent = "difficulty : " + recipe.difficulty;
             h3.classList.add("text-sm", "text-gray-600", "mt-2")
-            
+
+            const h5 = document.createElement('h3')
+            h5.textContent = "Prep Time : " + recipe.prepTimeMinutes + " min";
+            h5.classList.add("text-sm", "text-gray-600", "mt-1")
+
+            const h4 = document.createElement('h4')
+            h4.textContent = "Cuisine : " + recipe.cuisine; 
+            h4.classList.add("text-sm", "text-gray-600", "mt-1")
+             const button = document.createElement("button");
+        button.textContent = "Supprimer";
+
+        button.classList.add("bg-red-500", "hover:bg-red-600", "text-white", "text-sm", "font-semibold", "px-4", "py-2", "rounded-lg", "transition", "duration-200",);
+
+        div.append(img);
+        div.append(h2);
+        div.append(h3);
+        div.append(h5);
+        div.append(h4);
+        div.append(button);
+
+        recipesContainer.append(div);
+
         });
 
     }
