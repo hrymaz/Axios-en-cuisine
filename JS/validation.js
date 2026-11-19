@@ -1,5 +1,5 @@
 export async function searchRecipe(search) {
-    
+
     try {
 
         const response = await API.get("recipes/search?q=" + search);
