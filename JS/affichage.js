@@ -8,15 +8,7 @@ function fodeBailla() {
       cunter.textContent = "Nombre de recettes : " + recipes.length;
       recipes.forEach((recipe) => {
         const div = document.createElement("div");
-        div.classList.add(
-          "bg-white",
-          "p-4",
-          "rounded-2xl",
-          "shadow-md",
-          "hover:shadow-lg",
-          "transition",
-          "duration-300",
-        );
+        div.classList.add("bg-white", "p-4", "rounded-2xl", "shadow-md", "hover:shadow-lg", "transition", "duration-300", );
 
         const img = document.createElement("img");
         img.src = recipe.image;
@@ -41,18 +33,7 @@ function fodeBailla() {
         const button = document.createElement("button");
         button.textContent = "Supprimer";
 
-        button.classList.add(
-          "bg-red-500",
-          "hover:bg-red-600",
-          "text-white",
-          "text-sm",
-          "font-semibold",
-          "px-4",
-          "py-2",
-          "rounded-lg",
-          "transition",
-          "duration-200",
-        );
+        button.classList.add("bg-red-500", "hover:bg-red-600", "text-white", "text-sm", "font-semibold", "px-4", "py-2", "rounded-lg", "transition", "duration-200", );
 
         div.append(img);
         div.append(h2);
@@ -92,15 +73,7 @@ button.addEventListener("click", async () => {
 
       recipes.forEach((recipe) => {
         const div = document.createElement("div");
-        div.classList.add(
-          "bg-white",
-          "p-4",
-          "rounded-2xl",
-          "shadow-md",
-          "hover:shadow-lg",
-          "transition",
-          "duration-300",
-        );
+        div.classList.add( "bg-white", "p-4", "rounded-2xl", "shadow-md", "hover:shadow-lg", "transition", "duration-300",);
 
         const img = document.createElement("img");
         img.src = recipe.image;
@@ -125,18 +98,7 @@ button.addEventListener("click", async () => {
         const button = document.createElement("button");
         button.textContent = "Supprimer";
 
-        button.classList.add(
-          "bg-red-500",
-          "hover:bg-red-600",
-          "text-white",
-          "text-sm",
-          "font-semibold",
-          "px-4",
-          "py-2",
-          "rounded-lg",
-          "transition",
-          "duration-200",
-        );
+        button.classList.add("bg-red-500", "hover:bg-red-600", "text-white", "text-sm", "font-semibold", "px-4", "py-2",  "rounded-lg", "transition", "duration-200", );
 
         div.append(img);
         div.append(h2);
