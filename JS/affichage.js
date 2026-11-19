@@ -153,8 +153,6 @@ button.addEventListener("click", async () => {
   }
 });
 
-
-
 import validateRecipe from "./validation.js";
 
 async function addrecipe(recipe) {
@@ -177,23 +175,28 @@ const container = document.querySelector("#recipes");
 const submitBtn = document.querySelector("#submitBtn");
 const successMsg = document.querySelector("#");
 function numm() {
- 
-     form.addEventListener("submit" , (element) => {
-          element.preventDefault(); 
-            
+  form.addEventListener("submit", (element) => {
+    element.preventDefault();
 
-        successMsg.textContent = ""
-           const name = document.querySelector('#name').value.trim(); 
-           const cooking = document.querySelector('#cooking').valuetrim();
-           const difficulty = document.querySelector('#difficulty').value
-           const time = document.querySelector('#time')
-     
-           const valied  = validateRecipe( name , cooking , difficulty , time )
+    successMsg.textContent = "";
+    const name = document.querySelector("#name").value.trim();
+    const cooking = document.querySelector("#cooking").valuetrim();
+    const difficulty = document.querySelector("#difficulty").value;
+    const time = document.querySelector("#time");
 
-           if (!valied) return ; 
+    const valied = validateRecipe(name, cooking, difficulty, time);
 
-           
-             
-          } )
-  
+    if (!valied) return;
+
+    const newrecipe = {
+      name,
+      cooking,
+      difficulty,
+      time,
+    };
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    addrecipe(newRecipe);
+  });
 }
