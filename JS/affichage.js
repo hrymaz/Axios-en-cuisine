@@ -197,6 +197,16 @@ function numm() {
     submitBtn.disabled = true;
     submitBtn.textContent = "Sending...";
 
-    addrecipe(newRecipe);
+    addrecipe(newrecipe)
+    
+    .then((result) => {
+
+    if (result.data.status === "bad") {
+        successMsg.style.color = "red";
+        successMsg.textContent = "Failed to add recipe.";
+        console.error(result.data.errorMessage);
+        return;
+      }
+    });
   });
 }
