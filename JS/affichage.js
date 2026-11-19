@@ -125,3 +125,26 @@ try {
 
 });
 
+import validateRecipe from "./validation.js";   
+
+async function addrecipe(recipe) {
+
+    try {
+
+        const response = await API.post("recipes/add", recipe);
+
+        return {
+            status: "good",
+            data: response.data
+        };
+
+    } catch (error) {
+
+        return {
+            status: "bad",
+            errorMessage: String(error)
+        };
+
+    }
+
+}
