@@ -34,7 +34,7 @@ function fodeBailla() {
         button.textContent = "Supprimer";
 
         button.classList.add("bg-red-500", "hover:bg-red-600", "text-white", "text-sm", "font-semibold", "px-4", "py-2", "rounded-lg", "transition", "duration-200", );
-
+        
         button.addEventListener("click", () => {
           div.remove();
         });
@@ -104,7 +104,7 @@ button.addEventListener("click", async () => {
 
         button.classList.add("bg-red-500", "hover:bg-red-600", "text-white", "text-sm", "font-semibold", "px-4", "py-2",  "rounded-lg", "transition", "duration-200", );
 
-
+  
         button.addEventListener("click", () => {
           div.remove();
         });
