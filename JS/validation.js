@@ -63,3 +63,16 @@ export default function validateRecipe(name, cooking, difficulty, time) {
 
     return isValid;
 }
+
+
+export async function appeler(requete) {
+  try {
+    const response = await requete();
+    return response.data;
+  } catch (error) {
+    if (!error.response) throw new Error("Serveur injoignable");
+    if (error.response.status === 404) throw new Error("Recette introuvable (404)");
+    if (error.response.status >= 500) throw new Error("Erreur du serveur (500)");
+    throw new Error("Erreur : " + error.response.status);
+  }
+}
